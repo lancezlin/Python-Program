@@ -9,4 +9,4 @@ try:
     Pay = Hour * Rate * 1.5
   print Pay
 except:
-  print 'Please enter a number.'
+  print 'Error. Please enter a number.'
