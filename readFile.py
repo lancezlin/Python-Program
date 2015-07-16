@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
-
-This is a temporary script file.
+Write a program to read through a file and print the contents of the
+file (line by line) all in upper case.
+@author: lancezlin
 """
 
 fname = raw_input('Type a file name to read: \n')
