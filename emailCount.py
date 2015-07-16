@@ -26,3 +26,25 @@ for line in fileName:
     else:
         continue
 print emailCount
+# point out who sent most messages:
+largest = None
+for eml in emailCount.keys():
+    if emailCount[eml] > largest:
+        largest= emailCount[eml]
+        continue
+    else:
+        largest = largest
+print emailCount.keys()[emailCount.values().index(largest)], largest
+'''
+def maxEmail(Dic):
+    largest = None
+    for emails in Dic.keys():
+        if Dic[emails] > largest:
+            largest= Dic[emails]
+            continue
+        else:
+            largest = largest
+    return largest
+
+print maxEmail(emailCount)
+'''
