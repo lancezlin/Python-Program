@@ -18,7 +18,11 @@ while True:
         numList.append(value)
     except:
         if inp == 'done':
-            break
+            if len(numList) < 1:
+                print 'It is not done! please enter a number.'
+                continue
+            else:
+                break
         else:
             print 'Invalid Value! Please reenter a number.'
             continue
