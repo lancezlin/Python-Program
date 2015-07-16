@@ -4,6 +4,8 @@ Created on Thu Jul 16 15:36:56 2015
 Write a program to read through a mail log, and build a histogram
 using a dictionary to count how many messages have come from each email address
 and print the dictionary.
+Add code to the above program to figure out who has the most messages
+in the file.
 @author: linla
 """
 
