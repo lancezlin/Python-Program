@@ -28,3 +28,16 @@ if lg >0:
             continue
         length = len(newStr)
     print newStr
+    
+# using character array menthod
+'''
+oldList = list(string)
+newList = []
+for i in range(0, len(oldList)):
+    if oldList[i] == ' ':
+        newList.append('%20')
+    else:
+        newList.append(oldList[i])
+        newString = ''.join(newList)
+print len(newString)     
+'''
