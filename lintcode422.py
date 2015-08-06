@@ -10,6 +10,7 @@ class Solution:
     # @return {int} the length of last word
     def lengthOfLastWord(self, s):
         # Write your code here
+        '''
         s = s.rstrip().lstrip().lower()
         # lens = len(s)
         countLW = 0
@@ -21,4 +22,20 @@ class Solution:
                 continue
             else:
                 break
+        return countLW
+        '''
+        s = s.rstrip().lstrip().lower()
+        countLW = 0
+        lastWord = []
+        if len(s) > 1:
+            for i in xrange(len(s)-1, 0, -1):
+                while True:
+                    if s[i] != ' ':
+                        lastWord.append(s[i])
+                        continue
+                    else:
+                        break
+                countLW = len(lastWord)
+        elif len(s) == 1:
+            countLW = 1
         return countLW
