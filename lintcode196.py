@@ -21,10 +21,21 @@ class Solution:
                 break
         return missV
         '''
+        '''
         missV = None
         nums.sort()
         for i in xrange(0, len(nums)+1, 1):
             if nums.count(i) != 1:
                 missV = i
         return missV
-                
+        '''
+                missV = None
+        i = 0
+        while i <= len(nums):
+            if i in nums:
+                i += 1
+            else:
+                missV = i
+                break
+        return missV
+        
