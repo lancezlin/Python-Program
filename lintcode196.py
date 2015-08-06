@@ -29,7 +29,7 @@ class Solution:
                 missV = i
         return missV
         '''
-                missV = None
+        missV = None
         i = 0
         while i <= len(nums):
             if i in nums:
