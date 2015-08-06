@@ -1,5 +1,13 @@
 '''
+Compare two strings A and B, determine whether A contains all of the characters in B.
 
+The characters in string A and B are all Upper Case letters.
+
+Example:
+For A = "ABCD", B = "ACD", return true.
+
+For A = "ABCD", B = "AABC", return false.
+'''
 class Solution:
     """
     @param A : A string includes Upper Case letters
