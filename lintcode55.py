@@ -8,6 +8,7 @@ For A = "ABCD", B = "ACD", return true.
 
 For A = "ABCD", B = "AABC", return false.
 '''
+'''
 class Solution:
     """
     @param A : A string includes Upper Case letters
@@ -33,3 +34,18 @@ class Solution:
                     else:
                         return True
                         continue
+    '''
+class Solution:
+    """
+    @param A : A string includes Upper Case letters
+    @param B : A string includes Upper Case letters
+    @return :  if string A contains all of the characters in B return True else return False
+    """
+    def compareStrings(self, A, B):
+        # write your code here
+        listA = sorted(A)
+        listB = sorted(B)
+        for b in listB:
+            if (b is not None) and ((b not in listA) or (listB.count(b) > listA.count(b))):
+                return False
+        return True
