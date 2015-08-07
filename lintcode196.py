@@ -29,6 +29,7 @@ class Solution:
                 missV = i
         return missV
         '''
+        '''
         missV = None
         i = 0
         while i <= len(nums):
@@ -38,4 +39,7 @@ class Solution:
                 missV = i
                 break
         return missV
-        
+        '''
+        fullNums = range(0, len(nums)+1,1)
+        missV = sum(fullNums) - sum(nums)
+        return missV
