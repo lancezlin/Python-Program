@@ -33,11 +33,6 @@ class Solution:
         '''
         length = len(digits)
         digitNum = 0
-        '''
-        if length <= 1:
-            digitNum = digits[0]
-            pass
-        '''
         for i in xrange(0, length, 1):
             digitNum = digitNum + digits[i]*(10**(length-i-1))
         endNum = digitNum + 1
