@@ -1,6 +1,6 @@
 
 # coding: utf-8
-
+# Author: Lance
 # In[1]:
 
 # Call Pandas and Numpy, set up work directory
