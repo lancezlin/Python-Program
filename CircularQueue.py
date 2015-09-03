@@ -1,3 +1,4 @@
+# author: lance
 class CircularQueue:
 	"""docstring for CircularQueue"""
 	class _Note:

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Author: lance
 """
 Created on Thu Jul 16 15:18:55 2015
 Write a program that categorizes each mail message by which day of
