@@ -31,5 +31,11 @@ Created on Thu Sep  3 23:15:33 2015
       d.y = parseFloat(d.y)
       return d
   </script>
+    <script>
+    var scale = d3.scale.linear();
+    scale.domain([0, 1]); // data space
+    scale.range([0, 100]);      //pixel space
+    console.log(scale(0.5));    //prints 50
+    </script>
 </body>
 </html>
