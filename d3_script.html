@@ -32,10 +32,48 @@ Created on Thu Sep  3 23:15:33 2015
       return d
   </script>
     <script>
-    var scale = d3.scale.linear();
-    scale.domain([0, 1]); // data space
-    scale.range([0, 100]);      //pixel space
-    console.log(scale(0.5));    //prints 50
+        var scale = d3.scale.linear()
+        .domain([0, 1]); // data space
+        .range([0, 100]);      //pixel space
+        console.log(scale(0.5));    //prints 50
+    </script>
+    <script>
+        var scale = d3.scale.ordinal()
+            .domail(["A", "B", "C", "D"])
+            .rangeRoundPoints([0, 100]); //rangePoints([0, 100])
+            
+        console.log(scale("A"));    //prints 1
+        console.log(scale("B"));    //prints 34
+        console.log(scale("C"));    //prints 67
+        console.log(scale("D"));    //prints 100
+    </script>
+    <script>
+        var svg = d3.select("body").append("svg")
+        .attr("width", 250)
+        .attr("width", 250);
+    
+        var rect = svg.append("rect")
+        .attr("x", 50)
+        .attr("y", 50)
+        .attr("width", 50)
+        .attr("height", 50);
+    </script>
+    <script>
+        var data = [1, 2, 3, 4, 5];
+        var scale = d3.scale.linear()
+            .domain([1, 5])
+            .range([0, 200]);
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", 250)
+            .attr("height", 250);
+
+        svg.selectAll("rect").data("data")
+            .enter().append("rect")
+            .attr("x", function(d){ return scale(d); })
+            .attr("y", 50)
+            .attr("width", 20)
+            .attr("height", 20);
     </script>
 </body>
 </html>
