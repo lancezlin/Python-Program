@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep  3 23:15:33 2015
+
+@author: Lance
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <meta charset="utf-8">
+  <title>SVG Example</title>
+</head>
+<body>
+  <svg width="250", height="250">
+    <rect x="0" y="0" width="100" hight="100" fill="red" stroke="black" stroke-width="5"></rect>
+    <rect x="120" y="0" width="100" hight="100" fill="blue" stroke="black" stroke-width="5"></rect>
+    <rect x="0" y="120" width="100" hight="100" fill="green" stroke="black" stroke-width="5"></rect>
+    <rect x="120" y="120" width="100" hight="100" fill="black" stroke="black" stroke-width="5"></rect>
+  </svg>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script>
+    d3.csv("data.csv", function(myArrayofObjects){
+      myArrayofObjects.forEach(function(d){
+        console.log(d.x + ", ", d.y);
+      });
+    });
+  </script>
+</body>
+</html>
