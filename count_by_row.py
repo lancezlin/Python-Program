@@ -22,4 +22,5 @@ def count_dist_row(df):
         count_list.append(count_dict)
         i += 1
     df_count = pd.DataFrame(count_list)
-    return df_count  # return a dataframe to add back to the old df
+    df_fnl = pd.merge(df, df_count, right_index = True, left_index = True, how = 'left')
+    return df_fnl  # return a dataframe to add back to the old df
