@@ -3,7 +3,7 @@
 import pandas as pd
 
 def count_dist_row(df):
-    df = df.fillna(0)
+    df = df.fillna(0) # make sure NA was cleaned.
     shape_df = shape(df)
     max_row = shape_df[0]
     max_col = shape_df[1]
