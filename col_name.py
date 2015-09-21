@@ -1,9 +1,9 @@
 import pandas as pd
-def get_sal_col(df):
-    salary_col = []
+def col_cont_str(df, string): # df is data frame, string is a key word or sub key word
+    _col = []
     for col in list(df.columns.values):
-        if "PTB" in col:
-            salary_col.append(col) # get all column names contains PTB rate
+        if sting in col:
+            _col.append(col) # e.g. get all column names contains PTB rate
         else:
             continue
-    return salary_col
+    return _col
