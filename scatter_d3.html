@@ -55,7 +55,15 @@
 			.attr("font-size", "5px")
 			.attr("fill", "red");
 
-
+		svg.selectAll("rect")
+			.data(data)
+			.enter()
+			.append("rect")
+			.attr("x", 0)
+			.attr("y", h)
+			.attr("width", 2)
+			.attr("length", h)
+			.attr("fill", "black");
 
 
 	</script>
