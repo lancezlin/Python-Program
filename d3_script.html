@@ -70,7 +70,7 @@ Created on Thu Sep  3 23:15:33 2015
 
         svg.selectAll("rect").data("data")
             .enter().append("rect")
-            .attr("x", function(d){ return scale(d); })
+            .attr("x", scale) // function(d){ return scale(d);}
             .attr("y", 50)
             .attr("width", 20)
             .attr("height", 20);
