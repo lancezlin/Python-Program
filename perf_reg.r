@@ -21,3 +21,22 @@ RMSE(predicted, observed)
 # correlation
 cor(predicted, observed)
 cor(predicted, observed, method = "spearman")
+library(lubridate)
+library(reshape2)
+
+
+body <- read.table("http://www.amstat.org/publications/jse/datasets/body.dat.txt")
+boxplot(body)
+keep.par <- par() # stored the original settings >par(keep.par)
+par(mar=c(5, 4, 4, 2))
+boxplot(body, las=3)
+x <- 1:10
+set.seed(23)
+y <- x + rnorm(10)
+plot(x, y)
+plot(x, y, col=x)
+plot(x, y, col=x, cex=x)
+breaks <- seq(min(body$V22), max(body$V22), 5)
+v22_group <- cut((body$V22), breaks)
+body$group <- v22_group
+plot(body$V11, body$V20, pch=body$V25, col=body$group)
